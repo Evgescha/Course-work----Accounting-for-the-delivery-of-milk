@@ -14,6 +14,10 @@ namespace myMilkProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "milkdatabaseDataSet.пост". При необходимости она может быть перемещена или удалена.
+            this.постTableAdapter.Fill(this.milkdatabaseDataSet.пост);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "milkdatabaseDataSet.молоковоз". При необходимости она может быть перемещена или удалена.
+            this.молоковозTableAdapter.Fill(this.milkdatabaseDataSet.молоковоз);
             this.приездTableAdapter.Fill(this.milkdatabaseDataSet.приезд);
         }
 
@@ -51,6 +55,22 @@ namespace myMilkProject
         }
         // показать принимавших сотрудников
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                приездTableAdapter.Update(milkdatabaseDataSet.приезд);
+                MessageBox.Show("Изменения сохранены");
+                this.приездTableAdapter.Fill(this.milkdatabaseDataSet.приезд);
+            }
+            catch (Exception ex) { MessageBox.Show("Ошибка при сохранении данных.\n" + ex.Message); }
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
         }
