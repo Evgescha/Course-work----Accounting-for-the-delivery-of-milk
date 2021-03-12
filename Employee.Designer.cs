@@ -32,9 +32,7 @@ namespace myMilkProject
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.сотрудникBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.milkdatabaseDataSet = new myMilkProject.milkdatabaseDataSet();
-            this.сотрудникTableAdapter = new myMilkProject.milkdatabaseDataSetTableAdapters.сотрудникTableAdapter();
+            this.ФИО = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -48,23 +46,58 @@ namespace myMilkProject
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.приездBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.milkdatabaseDataSet = new myMilkProject.milkdatabaseDataSet();
+            this.сотрудникBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ФИО = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датаРожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.почтаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.сотрудникTableAdapter = new myMilkProject.milkdatabaseDataSetTableAdapters.сотрудникTableAdapter();
+            this.приездTableAdapter = new myMilkProject.milkdatabaseDataSetTableAdapters.приездTableAdapter();
+            this.молоковозBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.молоковозTableAdapter = new myMilkProject.milkdatabaseDataSetTableAdapters.молоковозTableAdapter();
+            this.постBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.постTableAdapter = new myMilkProject.milkdatabaseDataSetTableAdapters.постTableAdapter();
+            this.кодDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.молоковозDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.постDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.датаПриездаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.времяПриездаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.началиМытьDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.закончилиМытьDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.времяВыездаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.milkdatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
+            this.bindingNavigator2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.приездBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milkdatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.молоковозBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.постBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -79,22 +112,16 @@ namespace myMilkProject
             this.dataGridView1.DataSource = this.сотрудникBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 30);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(941, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 276);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // сотрудникBindingSource
+            // ФИО
             // 
-            this.сотрудникBindingSource.DataMember = "сотрудник";
-            this.сотрудникBindingSource.DataSource = this.milkdatabaseDataSet;
-            // 
-            // milkdatabaseDataSet
-            // 
-            this.milkdatabaseDataSet.DataSetName = "milkdatabaseDataSet";
-            this.milkdatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // сотрудникTableAdapter
-            // 
-            this.сотрудникTableAdapter.ClearBeforeFill = true;
+            this.ФИО.DataPropertyName = "ФИО";
+            this.ФИО.HeaderText = "ФИО";
+            this.ФИО.Name = "ФИО";
+            this.ФИО.Width = 59;
             // 
             // bindingNavigator1
             // 
@@ -122,7 +149,7 @@ namespace myMilkProject
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(965, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1084, 25);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -221,6 +248,157 @@ namespace myMilkProject
             this.toolStripButton1.Text = "Сохранить изменения";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.dataGridView2);
+            this.groupBox1.Controls.Add(this.bindingNavigator2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 334);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1060, 264);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Какие приезды обслуживали";
+            // 
+            // bindingNavigator2
+            // 
+            this.bindingNavigator2.AddNewItem = null;
+            this.bindingNavigator2.BindingSource = this.приездBindingSource;
+            this.bindingNavigator2.CountItem = this.bindingNavigatorCountItem1;
+            this.bindingNavigator2.DeleteItem = null;
+            this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem1,
+            this.bindingNavigatorMovePreviousItem1,
+            this.bindingNavigatorSeparator3,
+            this.bindingNavigatorPositionItem1,
+            this.bindingNavigatorCountItem1,
+            this.bindingNavigatorSeparator4,
+            this.bindingNavigatorMoveNextItem1,
+            this.bindingNavigatorMoveLastItem1,
+            this.bindingNavigatorSeparator5});
+            this.bindingNavigator2.Location = new System.Drawing.Point(3, 16);
+            this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
+            this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem1;
+            this.bindingNavigator2.MoveNextItem = this.bindingNavigatorMoveNextItem1;
+            this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
+            this.bindingNavigator2.Name = "bindingNavigator2";
+            this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem1;
+            this.bindingNavigator2.Size = new System.Drawing.Size(1054, 25);
+            this.bindingNavigator2.TabIndex = 0;
+            this.bindingNavigator2.Text = "bindingNavigator2";
+            // 
+            // bindingNavigatorMoveFirstItem1
+            // 
+            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
+            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem1.Text = "Переместить в начало";
+            // 
+            // bindingNavigatorMovePreviousItem1
+            // 
+            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
+            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem1.Text = "Переместить назад";
+            // 
+            // bindingNavigatorSeparator3
+            // 
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem1
+            // 
+            this.bindingNavigatorPositionItem1.AccessibleName = "Положение";
+            this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem1.Text = "0";
+            this.bindingNavigatorPositionItem1.ToolTipText = "Текущее положение";
+            // 
+            // bindingNavigatorCountItem1
+            // 
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem1.Text = "для {0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorSeparator4
+            // 
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem1
+            // 
+            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
+            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem1.Text = "Переместить вперед";
+            // 
+            // bindingNavigatorMoveLastItem1
+            // 
+            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
+            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem1.Text = "Переместить в конец";
+            // 
+            // bindingNavigatorSeparator5
+            // 
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.кодDataGridViewTextBoxColumn1,
+            this.молоковозDataGridViewTextBoxColumn,
+            this.постDataGridViewTextBoxColumn,
+            this.датаПриездаDataGridViewTextBoxColumn,
+            this.времяПриездаDataGridViewTextBoxColumn,
+            this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn,
+            this.началиМытьDataGridViewTextBoxColumn,
+            this.закончилиМытьDataGridViewTextBoxColumn,
+            this.времяВыездаDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.приездBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 44);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(1048, 214);
+            this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);
+            // 
+            // приездBindingSource
+            // 
+            this.приездBindingSource.DataMember = "приезд";
+            this.приездBindingSource.DataSource = this.milkdatabaseDataSet;
+            // 
+            // milkdatabaseDataSet
+            // 
+            this.milkdatabaseDataSet.DataSetName = "milkdatabaseDataSet";
+            this.milkdatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // сотрудникBindingSource
+            // 
+            this.сотрудникBindingSource.DataMember = "сотрудник";
+            this.сотрудникBindingSource.DataSource = this.milkdatabaseDataSet;
+            // 
             // кодDataGridViewTextBoxColumn
             // 
             this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
@@ -228,13 +406,6 @@ namespace myMilkProject
             this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
             this.кодDataGridViewTextBoxColumn.Visible = false;
             this.кодDataGridViewTextBoxColumn.Width = 51;
-            // 
-            // ФИО
-            // 
-            this.ФИО.DataPropertyName = "ФИО";
-            this.ФИО.HeaderText = "ФИО";
-            this.ФИО.Name = "ФИО";
-            this.ФИО.Width = 59;
             // 
             // датаРожденияDataGridViewTextBoxColumn
             // 
@@ -264,11 +435,120 @@ namespace myMilkProject
             this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
             this.адресDataGridViewTextBoxColumn.Width = 63;
             // 
+            // сотрудникTableAdapter
+            // 
+            this.сотрудникTableAdapter.ClearBeforeFill = true;
+            // 
+            // приездTableAdapter
+            // 
+            this.приездTableAdapter.ClearBeforeFill = true;
+            // 
+            // молоковозBindingSource
+            // 
+            this.молоковозBindingSource.DataMember = "молоковоз";
+            this.молоковозBindingSource.DataSource = this.milkdatabaseDataSet;
+            // 
+            // молоковозTableAdapter
+            // 
+            this.молоковозTableAdapter.ClearBeforeFill = true;
+            // 
+            // постBindingSource
+            // 
+            this.постBindingSource.DataMember = "пост";
+            this.постBindingSource.DataSource = this.milkdatabaseDataSet;
+            // 
+            // постTableAdapter
+            // 
+            this.постTableAdapter.ClearBeforeFill = true;
+            // 
+            // кодDataGridViewTextBoxColumn1
+            // 
+            this.кодDataGridViewTextBoxColumn1.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn1.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn1.Name = "кодDataGridViewTextBoxColumn1";
+            this.кодDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.кодDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // молоковозDataGridViewTextBoxColumn
+            // 
+            this.молоковозDataGridViewTextBoxColumn.DataPropertyName = "Молоковоз";
+            this.молоковозDataGridViewTextBoxColumn.DataSource = this.молоковозBindingSource;
+            this.молоковозDataGridViewTextBoxColumn.DisplayMember = "Название";
+            this.молоковозDataGridViewTextBoxColumn.HeaderText = "Молоковоз";
+            this.молоковозDataGridViewTextBoxColumn.Name = "молоковозDataGridViewTextBoxColumn";
+            this.молоковозDataGridViewTextBoxColumn.ReadOnly = true;
+            this.молоковозDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.молоковозDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.молоковозDataGridViewTextBoxColumn.ValueMember = "Код";
+            this.молоковозDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // постDataGridViewTextBoxColumn
+            // 
+            this.постDataGridViewTextBoxColumn.DataPropertyName = "Пост";
+            this.постDataGridViewTextBoxColumn.DataSource = this.постBindingSource;
+            this.постDataGridViewTextBoxColumn.DisplayMember = "Название";
+            this.постDataGridViewTextBoxColumn.HeaderText = "Пост";
+            this.постDataGridViewTextBoxColumn.Name = "постDataGridViewTextBoxColumn";
+            this.постDataGridViewTextBoxColumn.ReadOnly = true;
+            this.постDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.постDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.постDataGridViewTextBoxColumn.ValueMember = "Код";
+            this.постDataGridViewTextBoxColumn.Width = 57;
+            // 
+            // датаПриездаDataGridViewTextBoxColumn
+            // 
+            this.датаПриездаDataGridViewTextBoxColumn.DataPropertyName = "Дата приезда";
+            this.датаПриездаDataGridViewTextBoxColumn.HeaderText = "Дата приезда";
+            this.датаПриездаDataGridViewTextBoxColumn.Name = "датаПриездаDataGridViewTextBoxColumn";
+            this.датаПриездаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.датаПриездаDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // времяПриездаDataGridViewTextBoxColumn
+            // 
+            this.времяПриездаDataGridViewTextBoxColumn.DataPropertyName = "Время приезда";
+            this.времяПриездаDataGridViewTextBoxColumn.HeaderText = "Время приезда";
+            this.времяПриездаDataGridViewTextBoxColumn.Name = "времяПриездаDataGridViewTextBoxColumn";
+            this.времяПриездаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.времяПриездаDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // количествоПривезенногоМолокаЛDataGridViewTextBoxColumn
+            // 
+            this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn.DataPropertyName = "Количество привезенного молока, л";
+            this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn.HeaderText = "Количество привезенного молока, л";
+            this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn.Name = "количествоПривезенногоМолокаЛDataGridViewTextBoxColumn";
+            this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn.ReadOnly = true;
+            this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn.Width = 137;
+            // 
+            // началиМытьDataGridViewTextBoxColumn
+            // 
+            this.началиМытьDataGridViewTextBoxColumn.DataPropertyName = "Начали мыть";
+            this.началиМытьDataGridViewTextBoxColumn.HeaderText = "Начали мыть";
+            this.началиМытьDataGridViewTextBoxColumn.Name = "началиМытьDataGridViewTextBoxColumn";
+            this.началиМытьDataGridViewTextBoxColumn.ReadOnly = true;
+            this.началиМытьDataGridViewTextBoxColumn.Width = 91;
+            // 
+            // закончилиМытьDataGridViewTextBoxColumn
+            // 
+            this.закончилиМытьDataGridViewTextBoxColumn.DataPropertyName = "Закончили мыть";
+            this.закончилиМытьDataGridViewTextBoxColumn.HeaderText = "Закончили мыть";
+            this.закончилиМытьDataGridViewTextBoxColumn.Name = "закончилиМытьDataGridViewTextBoxColumn";
+            this.закончилиМытьDataGridViewTextBoxColumn.ReadOnly = true;
+            this.закончилиМытьDataGridViewTextBoxColumn.Width = 106;
+            // 
+            // времяВыездаDataGridViewTextBoxColumn
+            // 
+            this.времяВыездаDataGridViewTextBoxColumn.DataPropertyName = "Время выезда";
+            this.времяВыездаDataGridViewTextBoxColumn.HeaderText = "Время выезда";
+            this.времяВыездаDataGridViewTextBoxColumn.Name = "времяВыездаDataGridViewTextBoxColumn";
+            this.времяВыездаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.времяВыездаDataGridViewTextBoxColumn.Width = 97;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 289);
+            this.ClientSize = new System.Drawing.Size(1084, 610);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Employee";
@@ -276,11 +556,20 @@ namespace myMilkProject
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Employee_FormClosing);
             this.Load += new System.EventHandler(this.Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.milkdatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
+            this.bindingNavigator2.ResumeLayout(false);
+            this.bindingNavigator2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.приездBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milkdatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.молоковозBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.постBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +603,32 @@ namespace myMilkProject
         private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn почтаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingNavigator bindingNavigator2;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
+        private System.Windows.Forms.BindingSource приездBindingSource;
+        private milkdatabaseDataSetTableAdapters.приездTableAdapter приездTableAdapter;
+        private System.Windows.Forms.BindingSource молоковозBindingSource;
+        private milkdatabaseDataSetTableAdapters.молоковозTableAdapter молоковозTableAdapter;
+        private System.Windows.Forms.BindingSource постBindingSource;
+        private milkdatabaseDataSetTableAdapters.постTableAdapter постTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn молоковозDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn постDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датаПриездаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn времяПриездаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn количествоПривезенногоМолокаЛDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn началиМытьDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn закончилиМытьDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn времяВыездаDataGridViewTextBoxColumn;
     }
 }
