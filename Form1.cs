@@ -14,11 +14,7 @@ namespace myMilkProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "milkdatabaseDataSet.пост". При необходимости она может быть перемещена или удалена.
-            this.постTableAdapter.Fill(this.milkdatabaseDataSet.пост);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "milkdatabaseDataSet.молоковоз". При необходимости она может быть перемещена или удалена.
-            this.молоковозTableAdapter.Fill(this.milkdatabaseDataSet.молоковоз);
-            this.приездTableAdapter.Fill(this.milkdatabaseDataSet.приезд);
+            updateTables();
         }
 
         private void молоковозыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,6 +69,29 @@ namespace myMilkProject
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                обслуживаниеTableAdapter.Update(milkdatabaseDataSet.обслуживание);
+                MessageBox.Show("Изменения сохранены");
+                this.обслуживаниеTableAdapter.Fill(this.milkdatabaseDataSet.обслуживание);
+            }
+            catch (Exception ex) { MessageBox.Show("Ошибка при сохранении данных.\n" + ex.Message); }
+        }
+
+        private void обновитьДанныеТаблицToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateTables();
+        }
+        private void updateTables() {
+            this.сотрудникTableAdapter.Fill(this.milkdatabaseDataSet.сотрудник);
+            this.обслуживаниеTableAdapter.Fill(this.milkdatabaseDataSet.обслуживание);
+            this.постTableAdapter.Fill(this.milkdatabaseDataSet.пост);
+            this.молоковозTableAdapter.Fill(this.milkdatabaseDataSet.молоковоз);
+            this.приездTableAdapter.Fill(this.milkdatabaseDataSet.приезд);
         }
     }
 }
