@@ -19,7 +19,8 @@ namespace myMilkProject
 
         private void молоковозыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new MilkTanker().Show();
+            this.Hide();
         }
 
         private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)

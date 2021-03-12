@@ -74,6 +74,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>milkdatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MilkTanker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MilkTanker.Designer.cs">
+      <DependentUpon>MilkTanker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Post.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MilkTanker.resx">
+      <DependentUpon>MilkTanker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Post.resx">
       <DependentUpon>Post.cs</DependentUpon>

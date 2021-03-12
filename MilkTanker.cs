@@ -10,32 +10,32 @@ using System.Windows.Forms;
 
 namespace myMilkProject
 {
-    public partial class Employee : Form
+    public partial class MilkTanker : Form
     {
-        public Employee()
+        public MilkTanker()
         {
             InitializeComponent();
         }
 
-        private void Employee_Load(object sender, EventArgs e)
+        private void MilkTanker_Load(object sender, EventArgs e)
         {
-            this.сотрудникTableAdapter.Fill(this.milkdatabaseDataSet.сотрудник);
-        }
-
-        private void Employee_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Form1.main.Show();
+            this.молоковозTableAdapter.Fill(this.milkdatabaseDataSet.молоковоз);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             try
             {
-                сотрудникTableAdapter.Update(milkdatabaseDataSet.сотрудник);
+                молоковозTableAdapter.Update(milkdatabaseDataSet.молоковоз);
                 MessageBox.Show("Изменения сохранены");
-                this.сотрудникTableAdapter.Fill(this.milkdatabaseDataSet.сотрудник);
+                this.молоковозTableAdapter.Fill(this.milkdatabaseDataSet.молоковоз);
             }
             catch (Exception ex) { MessageBox.Show("Ошибка при сохранении данных.\n" + ex.Message); }
+        }
+
+        private void MilkTanker_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1.main.Show();
         }
     }
 }
