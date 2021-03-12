@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myMilkProject", "myMilkProject.csproj", "{D82ED01D-10CA-419A-AA38-AA5694B6C8F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D82ED01D-10CA-419A-AA38-AA5694B6C8F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82ED01D-10CA-419A-AA38-AA5694B6C8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82ED01D-10CA-419A-AA38-AA5694B6C8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82ED01D-10CA-419A-AA38-AA5694B6C8F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {701211A5-E7BE-4B06-876D-5B8BC9EC985A}
+	EndGlobalSection
+EndGlobal
