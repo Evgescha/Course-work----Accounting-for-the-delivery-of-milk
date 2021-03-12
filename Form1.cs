@@ -34,27 +34,7 @@ namespace myMilkProject
             new Post().Show();
             this.Hide();
         }
-        // добавить
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-        // изменить
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-        // удалить
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-        // показать принимавших сотрудников
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             try
@@ -68,7 +48,6 @@ namespace myMilkProject
 
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
