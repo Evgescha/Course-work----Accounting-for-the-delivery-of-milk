@@ -76,18 +76,21 @@ namespace myMilkProject
             this.молоковозыToolStripMenuItem.Name = "молоковозыToolStripMenuItem";
             this.молоковозыToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.молоковозыToolStripMenuItem.Text = "Молоковозы";
+            this.молоковозыToolStripMenuItem.Click += new System.EventHandler(this.молоковозыToolStripMenuItem_Click);
             // 
             // сотрудникиToolStripMenuItem
             // 
             this.сотрудникиToolStripMenuItem.Name = "сотрудникиToolStripMenuItem";
             this.сотрудникиToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.сотрудникиToolStripMenuItem.Text = "Сотрудники";
+            this.сотрудникиToolStripMenuItem.Click += new System.EventHandler(this.сотрудникиToolStripMenuItem_Click);
             // 
             // постыToolStripMenuItem
             // 
             this.постыToolStripMenuItem.Name = "постыToolStripMenuItem";
             this.постыToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.постыToolStripMenuItem.Text = "Посты";
+            this.постыToolStripMenuItem.Click += new System.EventHandler(this.постыToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -97,6 +100,7 @@ namespace myMilkProject
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.кодDataGridViewTextBoxColumn,
@@ -124,6 +128,7 @@ namespace myMilkProject
             this.button1.TabIndex = 2;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -134,6 +139,7 @@ namespace myMilkProject
             this.button2.TabIndex = 3;
             this.button2.Text = "Изменить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -144,6 +150,7 @@ namespace myMilkProject
             this.button3.TabIndex = 4;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
@@ -167,6 +174,7 @@ namespace myMilkProject
             this.button4.TabIndex = 7;
             this.button4.Text = "Показать кто обслуживал";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // milkdatabaseDataSet
             // 
@@ -196,6 +204,7 @@ namespace myMilkProject
             this.молоковозDataGridViewTextBoxColumn.HeaderText = "Молоковоз";
             this.молоковозDataGridViewTextBoxColumn.Name = "молоковозDataGridViewTextBoxColumn";
             this.молоковозDataGridViewTextBoxColumn.ReadOnly = true;
+            this.молоковозDataGridViewTextBoxColumn.Width = 89;
             // 
             // постDataGridViewTextBoxColumn
             // 
@@ -203,6 +212,7 @@ namespace myMilkProject
             this.постDataGridViewTextBoxColumn.HeaderText = "Пост";
             this.постDataGridViewTextBoxColumn.Name = "постDataGridViewTextBoxColumn";
             this.постDataGridViewTextBoxColumn.ReadOnly = true;
+            this.постDataGridViewTextBoxColumn.Width = 57;
             // 
             // датаПриездаDataGridViewTextBoxColumn
             // 
@@ -210,6 +220,7 @@ namespace myMilkProject
             this.датаПриездаDataGridViewTextBoxColumn.HeaderText = "Дата приезда";
             this.датаПриездаDataGridViewTextBoxColumn.Name = "датаПриездаDataGridViewTextBoxColumn";
             this.датаПриездаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.датаПриездаDataGridViewTextBoxColumn.Width = 95;
             // 
             // времяПриездаDataGridViewTextBoxColumn
             // 
@@ -217,6 +228,7 @@ namespace myMilkProject
             this.времяПриездаDataGridViewTextBoxColumn.HeaderText = "Время приезда";
             this.времяПриездаDataGridViewTextBoxColumn.Name = "времяПриездаDataGridViewTextBoxColumn";
             this.времяПриездаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.времяПриездаDataGridViewTextBoxColumn.Width = 101;
             // 
             // количествоПривезенногоМолокаЛDataGridViewTextBoxColumn
             // 
@@ -224,6 +236,7 @@ namespace myMilkProject
             this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn.HeaderText = "Количество привезенного молока, л";
             this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn.Name = "количествоПривезенногоМолокаЛDataGridViewTextBoxColumn";
             this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn.ReadOnly = true;
+            this.количествоПривезенногоМолокаЛDataGridViewTextBoxColumn.Width = 137;
             // 
             // началиМытьDataGridViewTextBoxColumn
             // 
@@ -231,6 +244,7 @@ namespace myMilkProject
             this.началиМытьDataGridViewTextBoxColumn.HeaderText = "Начали мыть";
             this.началиМытьDataGridViewTextBoxColumn.Name = "началиМытьDataGridViewTextBoxColumn";
             this.началиМытьDataGridViewTextBoxColumn.ReadOnly = true;
+            this.началиМытьDataGridViewTextBoxColumn.Width = 91;
             // 
             // закончилиМытьDataGridViewTextBoxColumn
             // 
@@ -238,6 +252,7 @@ namespace myMilkProject
             this.закончилиМытьDataGridViewTextBoxColumn.HeaderText = "Закончили мыть";
             this.закончилиМытьDataGridViewTextBoxColumn.Name = "закончилиМытьDataGridViewTextBoxColumn";
             this.закончилиМытьDataGridViewTextBoxColumn.ReadOnly = true;
+            this.закончилиМытьDataGridViewTextBoxColumn.Width = 106;
             // 
             // времяВыездаDataGridViewTextBoxColumn
             // 
@@ -245,6 +260,7 @@ namespace myMilkProject
             this.времяВыездаDataGridViewTextBoxColumn.HeaderText = "Время выезда";
             this.времяВыездаDataGridViewTextBoxColumn.Name = "времяВыездаDataGridViewTextBoxColumn";
             this.времяВыездаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.времяВыездаDataGridViewTextBoxColumn.Width = 97;
             // 
             // Form1
             // 
