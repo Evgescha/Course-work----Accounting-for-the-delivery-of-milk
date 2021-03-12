@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace myMilkProject
@@ -31,7 +24,8 @@ namespace myMilkProject
 
         private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new Employee().Show();
+            this.Hide();
         }
 
         private void постыToolStripMenuItem_Click(object sender, EventArgs e)
